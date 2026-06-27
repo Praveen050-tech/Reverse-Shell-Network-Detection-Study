@@ -24,9 +24,15 @@ Step 3: Executing the Egress Pivot PayloadOn the target interface, a native inte
 
 <img width="1919" height="969" alt="Screenshot 2026-06-27 145949" src="https://github.com/user-attachments/assets/436b190f-70ca-4836-bed5-ceedaa55ef1e" />
 
-Step 4: Enumeration & Stream TerminationUpon shell connection validation, manual discovery commands (whoami, hostname) were executed through the listener interface to generate standard administrative telemetry traffic before the stream was ended cleanly using the exit command string.4. Analytical Results & Verification MatrixBy evaluating the raw packet capture layers via Wireshark's Follow TCP Stream decoding utility, the foundational architectural footprints of the reverse shell were successfully extracted.Network Indicators of Compromise (IoCs)Technical MetricObserved Lab ValueDefensive Threat ClassificationConnection DirectionOutbound from random high portEgress Anomaly (Bypasses traditional ingress rules)Payload EncryptionCleartext ASCII text (whoami, exit)Unencrypted Command & Control (C2) ChannelTransport ProtocolStream-oriented TCP FlagsPersistent Session (Lingering stateful connection)Decoded TCP Stream Transcript:Plaintext================================================================================
-KALI ATTACKER NODE (PORT 4444) <---> LOCAL LOOPBACK TARGET (EPHEMERAL PORT)
-================================================================================
+Step 4: Enumeration & Stream TerminationUpon shell connection validation, manual discovery commands (whoami, hostname) were executed through the listener interface to generate standard administrative telemetry traffic before the stream was ended cleanly using the exit command string.
+
+4. Analytical Results & Verification MatrixBy evaluating the raw packet capture layers via Wireshark's Follow TCP Stream decoding utility, the foundational architectural footprints of the reverse shell were successfully extracted.
+
+Technical Metric,Observed Lab Value,Defensive Threat Classification
+Connection Direction,Outbound from random high port,Egress Anomaly (Bypasses traditional ingress rules)
+Payload Encryption,"Cleartext ASCII text (whoami, exit)",Unencrypted Command & Control (C2) Channel
+Transport Protocol,Stream-oriented TCP Flags,Persistent Session (Lingering stateful connection)
+
 kali@kali:~$ whoami
 kali
 kali@kali:~$ hostname

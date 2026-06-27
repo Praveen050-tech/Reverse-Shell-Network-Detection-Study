@@ -39,6 +39,6 @@ kali
 kali@kali:~$ exit
 exit
 
-<img width="1919" height="974" alt="Screenshot 2026-06-27 145829" src="https://github.com/user-attachments/assets/f706e98b-899e-473d-ab3d-c41548da220e" />
+<img width="1917" height="977" alt="image" src="https://github.com/user-attachments/assets/3cd32847-47e3-4e42-b7a0-f23bfccb3d74" />
 
 5. Key Cybersecurity TakeawaysThe Egress Evasion Vulnerability: Standard perimeter firewalls heavily restrict inbound requests but inherently trust outbound traffic. Reverse shells abuse this logic, making rigorous egress port filtering a mandatory security baseline.Protocol Incongruity Auditing: While port 4444 was utilized for this lab, adversaries often route reverse shells over standard open ports like HTTP (80) or HTTPS (443). Security sensors must use Deep Packet Inspection (DPI) to look past the port number and catch shell prompts hidden inside standard web lanes.Heuristic Signal Tracking: Detecting unencrypted shells does not rely solely on finding static signatures. Security orchestration platforms must flag abnormal behavioral patterns, such as an internal endpoint sustaining a long-term interactive socket with a completely external public network space.

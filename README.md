@@ -8,12 +8,7 @@ This project simulates an active post-compromise egress pivot utilizing an inter
 ## 2. Technical Topology & Architecture
 The lab monitors directional outbound socket connections routed internally via the local loopback interface:
 
-[ Target Context (Victim) ] =(Outbound /bin/bash Stream)=> [ Local Loopback (lo) ]
-|
-(Packet Capture)
-|
-v
-[ Attacker Context (Kali) ] <=(Active Netcat Port 4444)= [ Wireshark Engine ]
+<img width="902" height="221" alt="image" src="https://github.com/user-attachments/assets/779f4ab9-ca64-40fd-9e7f-1f5253db4557" />
 
 ## 3. Deployment & Execution Steps
 
